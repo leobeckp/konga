@@ -43,7 +43,10 @@ module.exports = {
   },
 
   // Keep data of response errors in production mode
-  keepResponseErrors : true
+  keepResponseErrors : true,
 
+  onlyAllowOrigins: [
+    process.env.ONLY_ALLOW_ORIGIN ? fs.readFileSync(process.env.ONLY_ALLOW_ORIGIN) : 'http://localhost:1337'
+  ]
 
 };

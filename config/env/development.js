@@ -29,5 +29,10 @@ module.exports = {
 
   log: {
     level: process.env.KONGA_LOG_LEVEL || "debug"
-  }
+  },
+
+  onlyAllowOrigins: [
+    process.env.ONLY_ALLOW_ORIGIN ? fs.readFileSync(process.env.ONLY_ALLOW_ORIGIN) : 'http://localhost:1337'
+  ]
+  
 };

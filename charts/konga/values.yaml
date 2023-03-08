@@ -36,6 +36,7 @@ config: {}
 #   token_secret:
 #   konga_node_data:
 #   konga_user_data:
+#   only_allow_origin:
 
 # LDAP configuration for Konga
 ldap: {}

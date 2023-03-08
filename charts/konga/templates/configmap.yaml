@@ -13,6 +13,7 @@ data:
   NODE_ENV: {{ default "development" .Values.config.node_env }}
   SSL_KEY_PATH: {{ .Values.config.ssl_key_path }}
   SSL_CRT_PATH: {{ .Values.config.ssl_crt_path }}
+  ONLY_ALLOW_ORIGIN: {{ .Values.config.only_allow_origin }}
   KONGA_HOOK_TIMEOUT: "{{ default 60000 .Values.config.konga_hook_timeout }}"
   DB_ADAPTER: {{ default "postgres" .Values.config.db_adapter }}
   DB_URI: {{ .Values.config.db_uri }}
